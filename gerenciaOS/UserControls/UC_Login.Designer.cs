@@ -38,7 +38,7 @@
             // 
             // btnLogar
             // 
-            btnLogar.Location = new Point(332, 223);
+            btnLogar.Location = new Point(343, 215);
             btnLogar.Name = "btnLogar";
             btnLogar.Size = new Size(98, 42);
             btnLogar.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(361, 81);
+            label1.Location = new Point(369, 82);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
             label1.TabIndex = 1;
@@ -57,14 +57,14 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(294, 99);
+            txtUsuario.Location = new Point(302, 100);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(183, 23);
             txtUsuario.TabIndex = 2;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(294, 165);
+            txtSenha.Location = new Point(302, 166);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(183, 23);
             txtSenha.TabIndex = 4;
@@ -72,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(361, 138);
+            label2.Location = new Point(369, 139);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 3;
@@ -81,7 +81,7 @@
             // lnkCadastro
             // 
             lnkCadastro.AutoSize = true;
-            lnkCadastro.Location = new Point(294, 191);
+            lnkCadastro.Location = new Point(302, 192);
             lnkCadastro.Name = "lnkCadastro";
             lnkCadastro.Size = new Size(0, 15);
             lnkCadastro.TabIndex = 5;

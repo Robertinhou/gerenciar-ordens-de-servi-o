@@ -47,6 +47,9 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 52);
             panel1.TabIndex = 0;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
+            panel1.MouseUp += panel1_MouseUp;
             // 
             // pictureBox2
             // 
@@ -57,6 +60,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -67,6 +71,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pnlConteudo
             // 
@@ -75,6 +80,7 @@
             pnlConteudo.Name = "pnlConteudo";
             pnlConteudo.Size = new Size(800, 419);
             pnlConteudo.TabIndex = 1;
+            pnlConteudo.Paint += pnlConteudo_Paint_1;
             // 
             // Conteudo
             // 
@@ -87,7 +93,8 @@
             Name = "Conteudo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Conteudo_Load;
+            Load += Conteudo_Load_1;
+            MouseMove += Conteudo_MouseMove;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -4,6 +4,15 @@
     <Compile Update="Conteudo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\conteudoOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_CadastrarOs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_EditarOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>

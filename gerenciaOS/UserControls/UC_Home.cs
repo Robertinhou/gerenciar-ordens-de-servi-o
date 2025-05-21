@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace gerenciaOS.UserControls
 {
@@ -20,34 +21,33 @@ namespace gerenciaOS.UserControls
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
 
+            UC_CadastrarOs cad = new UC_CadastrarOs();
+            this.Controls.Clear();
+            this.Controls.Add(cad);
 
-            GerenciarOS OS = new GerenciarOS();
-
-            OS.Titulo = txtTitulo.Text;
-            OS.Descricao = txtDesc.Text;
-            OS.Nome_Cliente = txtNome.Text;
-            OS.Data = dtpData.Value;
-
-            if (!txtNome.Text.Equals("") || !txtDesc.Text.Equals("") || !txtTitulo.Text.Equals("")  ) {
-
-
-                if (OS.CadastrarOs())
-                {
-
-                    MessageBox.Show("OS cadastrada!");
-
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possível cadastrar a OS!");
-                }
-                
-                
-
-            }
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
 
 
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+
+            GerenciarOS os = new GerenciarOS();
+
+            os.ListarOS(dgvOS);
+
+        }
+
+        private void dgvOS_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            string 
+
+        }
     }
 }

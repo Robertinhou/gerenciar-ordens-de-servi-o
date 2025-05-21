@@ -20,6 +20,7 @@ namespace gerenciaOS.UserControls
         private void btnLogar_Click(object sender, EventArgs e)
         {
 
+          
 
             if(!txtSenha.Text.Equals("") && !txtUsuario.Text.Equals(""))
             {
@@ -37,7 +38,15 @@ namespace gerenciaOS.UserControls
                     this.Controls.Add(home);
 
                 }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha incorretos!");
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("Preencha os dados corretamente!");
             }
 
         }

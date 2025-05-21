@@ -134,35 +134,43 @@ namespace gerenciaOS
             try
             {
 
-                using (MySqlConnection conexao = new ConexaoBD().Conectar())
+                if (verificarLogin())
+                {
+                    MessageBox.Show("Esse usuário já está cadatrado!");
+                    return false;
+                }
+                else
                 {
 
-                    string sql = "INSERT INTO usuarios (nome, usuario, email, senha) VALUES (@nome, @usuario, @email, @senha)";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
-
-                    cmd.Parameters.AddWithValue("@nome", Nome_Completo);
-                    cmd.Parameters.AddWithValue("@usuario", Usuario);
-                    cmd.Parameters.AddWithValue("@email", Email);
-                    cmd.Parameters.AddWithValue("@senha", CriptografarSenha(Senha));
-
-                    int result = cmd.ExecuteNonQuery();
-
-                    if (result > 0)
+                    using (MySqlConnection conexao = new ConexaoBD().Conectar())
                     {
 
-                        MessageBox.Show("Usuaário cadastrado!");
-                        return true;
+                        string sql = "INSERT INTO usuarios (nome, usuario, email, senha) VALUES (@nome, @usuario, @email, @senha)";
+
+                        MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                        cmd.Parameters.AddWithValue("@nome", Nome_Completo);
+                        cmd.Parameters.AddWithValue("@usuario", Usuario);
+                        cmd.Parameters.AddWithValue("@email", Email);
+                        cmd.Parameters.AddWithValue("@senha", CriptografarSenha(Senha));
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+
+                            MessageBox.Show("Usuaário cadastrado!");
+                            return true;
+
+                        }
+                        else
+                        {
+
+                            return false;
+                        }
 
                     }
-                    else
-                    {
-
-                        return false;
-                    }
-
                 }
-
             }
             catch (Exception ex)
             {

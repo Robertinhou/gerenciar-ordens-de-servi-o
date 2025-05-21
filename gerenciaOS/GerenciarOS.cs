@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -15,6 +16,7 @@ namespace gerenciaOS
         private string descricao;
         private string nome_cliente;
         private DateTime data;
+        private string status;
 
         public string Titulo
         {
@@ -40,6 +42,14 @@ namespace gerenciaOS
 
         }
 
+        public string Status
+        {
+
+            get { return status; }
+            set { status = value; }
+
+        }
+
         public DateTime Data
         {
 
@@ -56,10 +66,10 @@ namespace gerenciaOS
             {
 
 
-                using(MySqlConnection conexao = new ConexaoBD().Conectar())
+                using (MySqlConnection conexao = new ConexaoBD().Conectar())
                 {
 
-                    string sql = "INSERT INTO os (titulo, descricao, nome_cliente, data_emissao) VALUES (@titulo, @desc, @nome, @data)";
+                    string sql = "INSERT INTO os (titulo, descricao, nome_cliente, data_emissao, statusOS) VALUES (@titulo, @desc, @nome, @data, @status)";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
@@ -67,6 +77,7 @@ namespace gerenciaOS
                     cmd.Parameters.AddWithValue("@desc", Descricao);
                     cmd.Parameters.AddWithValue("@nome", Nome_Cliente);
                     cmd.Parameters.AddWithValue("@data", Data);
+                    cmd.Parameters.AddWithValue("@status", Status);
 
                     int result = cmd.ExecuteNonQuery();
 
@@ -93,9 +104,45 @@ namespace gerenciaOS
                 return false;
 
             }
-            
+
 
         }
 
+
+
+        public void ListarOS(DataGridView dgv)
+        {
+
+            try {
+
+
+
+
+                using (MySqlConnection conexao = new ConexaoBD().Conectar()) {
+
+
+
+                    DataTable dt = new DataTable();
+                    string busca = "SELECT * FROM os";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(busca, conexao);
+                    adapter.Fill(dt);
+
+                    dgv.AllowUserToAddRows = false;
+
+                    dgv.DataSource = dt;
+                    dgv.ClearSelection();
+
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
     }
 }

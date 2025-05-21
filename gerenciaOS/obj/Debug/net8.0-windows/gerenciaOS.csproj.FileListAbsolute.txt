@@ -35,3 +35,7 @@ C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\bin\Debug\net
 C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\obj\Debug\net8.0-windows\gerenciaOS.csproj.Up2Date
+C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\obj\Debug\net8.0-windows\gerenciaOS.sourcelink.json
+C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\obj\Debug\net8.0-windows\gerenciaOS.UserControls.conteudoOS.resources
+C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\obj\Debug\net8.0-windows\gerenciaOS.UserControls.UC_CadastrarOs.resources
+C:\Users\Aluno_Manha\source\repos\GerenciaOS\gerenciaOS\gerenciaOS\obj\Debug\net8.0-windows\gerenciaOS.UserControls.UC_EditarOS.resources
