@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gerenciaOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+034f1570312c61cc7d427b53b350a40046b4da3f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94cfb7802c395d5343d9aedf1e593f931f9ed32e")]
 [assembly: System.Reflection.AssemblyProductAttribute("gerenciaOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gerenciaOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

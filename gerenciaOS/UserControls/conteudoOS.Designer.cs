@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtTitulo = new TextBox();
             lblTitulo = new Label();
             btnEditar = new Button();
             txtDescricao = new TextBox();
             lblDesc = new Label();
             lblNome = new Label();
-            textBox2 = new TextBox();
+            txtNome = new TextBox();
             lblStatus = new Label();
-            listView1 = new ListView();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
-            // textBox1
+            // txtTitulo
             // 
-            textBox1.Location = new Point(271, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(240, 23);
-            textBox1.TabIndex = 1;
+            txtTitulo.Location = new Point(271, 36);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(240, 23);
+            txtTitulo.TabIndex = 1;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Location = new Point(352, 18);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(72, 15);
+            lblTitulo.Size = new Size(71, 15);
             lblTitulo.TabIndex = 2;
             lblTitulo.Text = "Titulo da OS";
             // 
@@ -63,6 +63,7 @@
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Salvar alterações";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // txtDescricao
             // 
@@ -90,12 +91,12 @@
             lblNome.TabIndex = 6;
             lblNome.Text = "Nome do cliente";
             // 
-            // textBox2
+            // txtNome
             // 
-            textBox2.Location = new Point(245, 287);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(273, 23);
-            textBox2.TabIndex = 7;
+            txtNome.Location = new Point(245, 287);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(273, 23);
+            txtNome.TabIndex = 7;
             // 
             // lblStatus
             // 
@@ -106,27 +107,28 @@
             lblStatus.TabIndex = 8;
             lblStatus.Text = "Status";
             // 
-            // listView1
+            // comboBox1
             // 
-            listView1.Location = new Point(315, 349);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(140, 25);
-            listView1.TabIndex = 9;
-            listView1.UseCompatibleStateImageBehavior = false;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Pendente", "Concluido" });
+            comboBox1.Location = new Point(317, 349);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 10;
             // 
             // conteudoOS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(listView1);
+            Controls.Add(comboBox1);
             Controls.Add(lblStatus);
-            Controls.Add(textBox2);
+            Controls.Add(txtNome);
             Controls.Add(lblNome);
             Controls.Add(lblDesc);
             Controls.Add(txtDescricao);
             Controls.Add(btnEditar);
             Controls.Add(lblTitulo);
-            Controls.Add(textBox1);
+            Controls.Add(txtTitulo);
             Name = "conteudoOS";
             Size = new Size(800, 419);
             Load += conteudoOS_Load;
@@ -136,14 +138,14 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtTitulo;
         private Label lblTitulo;
         private Button btnEditar;
         private TextBox txtDescricao;
         private Label lblDesc;
         private Label lblNome;
-        private TextBox textBox2;
+        private TextBox txtNome;
         private Label lblStatus;
-        private ListView listView1;
+        private ComboBox comboBox1;
     }
 }

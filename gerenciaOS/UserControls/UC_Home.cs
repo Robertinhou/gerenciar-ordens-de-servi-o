@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 
 namespace gerenciaOS.UserControls
 {
@@ -45,9 +46,34 @@ namespace gerenciaOS.UserControls
 
         private void dgvOS_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.Controls.Clear();
+            GerenciarOS osS = new GerenciarOS();
+            osS.Id = Convert.ToInt32(dgvOS.Rows[e.RowIndex].Cells[0].Value);
+            osS.Titulo = dgvOS.Rows[e.RowIndex].Cells[1].Value.ToString();
+            osS.Descricao = dgvOS.Rows[e.RowIndex].Cells[2].Value.ToString();
+            osS.Nome_Cliente = dgvOS.Rows[e.RowIndex].Cells[3].Value.ToString();
+            osS.Data = Convert.ToDateTime(dgvOS.Rows[e.RowIndex].Cells[4].Value);
+            osS.Status = dgvOS.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-            string 
+            conteudoOS editar = new conteudoOS(osS);
 
+            this.Controls.Add(editar);
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Tem certeza que deseja deletar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                GerenciarOS os = new GerenciarOS();
+                os.Id = Convert.ToInt32(dgvOS.CurrentRow.Cells[0].Value);
+                os.DeletarOS();
+                os.ListarOS(dgvOS);
+            }
+            
         }
     }
 }

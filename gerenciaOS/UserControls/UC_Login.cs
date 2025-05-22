@@ -15,19 +15,23 @@ namespace gerenciaOS.UserControls
         public UC_Login()
         {
             InitializeComponent();
+            txtSenha.UseSystemPasswordChar = true;
+            pbOculto.Visible = false;
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
 
-          
 
-            if(!txtSenha.Text.Equals("") && !txtUsuario.Text.Equals(""))
+
+            if (!txtSenha.Text.Equals("") && !txtUsuario.Text.Equals(""))
             {
 
                 Usuarios usuario = new Usuarios();
                 usuario.Senha = txtSenha.Text;
                 usuario.Usuario = txtUsuario.Text;
+
+
 
 
                 if (usuario.verificarLogin())
@@ -40,7 +44,9 @@ namespace gerenciaOS.UserControls
                 }
                 else
                 {
-                    MessageBox.Show("Usuário ou senha incorretos!");
+
+                    MessageBox.Show("Usuário não cadastrado ou senha incorreta!");
+
                 }
 
             }
@@ -49,6 +55,22 @@ namespace gerenciaOS.UserControls
                 MessageBox.Show("Preencha os dados corretamente!");
             }
 
+        }
+
+        private void pbOculto_Click(object sender, EventArgs e)
+        {
+
+            txtSenha.UseSystemPasswordChar = true;
+            pbVisivel.Visible = true;
+            pbOculto.Visible = false;
+
+        }
+
+        private void pbVisivel_Click(object sender, EventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+            pbVisivel.Visible = false;
+            pbOculto.Visible = true;
         }
     }
 }

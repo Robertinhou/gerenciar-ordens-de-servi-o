@@ -31,6 +31,7 @@
             dgvOS = new DataGridView();
             btnCadastrar = new Button();
             btnListar = new Button();
+            btnDeletar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvOS).BeginInit();
             SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(247, 80);
+            btnCadastrar.Location = new Point(227, 80);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(114, 37);
             btnCadastrar.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnListar
             // 
-            btnListar.Location = new Point(429, 80);
+            btnListar.Location = new Point(488, 80);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(114, 37);
             btnListar.TabIndex = 2;
@@ -63,10 +64,21 @@
             btnListar.UseVisualStyleBackColor = true;
             btnListar.Click += btnListar_Click;
             // 
+            // btnDeletar
+            // 
+            btnDeletar.Location = new Point(357, 80);
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.Size = new Size(114, 37);
+            btnDeletar.TabIndex = 3;
+            btnDeletar.Text = "Deletar";
+            btnDeletar.UseVisualStyleBackColor = true;
+            btnDeletar.Click += btnDeletar_Click;
+            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnDeletar);
             Controls.Add(btnListar);
             Controls.Add(btnCadastrar);
             Controls.Add(dgvOS);
@@ -81,5 +93,6 @@
         private DataGridView dgvOS;
         private Button btnCadastrar;
         private Button btnListar;
+        private Button btnDeletar;
     }
 }
